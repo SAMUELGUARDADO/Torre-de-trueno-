@@ -1,0 +1,82 @@
+# This workflow will build a docker container, publish it to Google Container
+# Registry, and deploy it to GKE when there is a push to the "main"
+# branch.
+#
+# To configure this workflow:
+#
+# 1. Enable the following Google Cloud APIs:
+#
+#    - Artifact Registry (artifactregistry.googleapis.com)
+#    - Google Kubernetes Engine (container.googleapis.com)
+#    - IAM Credentials API (iamcredentials.googleapis.com)
+#
+#    You can learn more about enabling APIs at
+#    https://support.google.com/googleapi/answer/6158841.
+#
+# 2. Ensure that your repository contains the necessary configuration for your
+#    Google Kubernetes Engine cluster, including deployment.yml,
+#    kustomization.yml, service.yml, etc.
+#
+# 3. Create and configure a Workload Identity Provider for GitHub:
+#    https://github.com/google-github-actions/auth#preferred-direct-workload-identity-federation.
+#
+#    Depending on how you authenticate, you will need to grant an IAM principal
+#    permissions on Google Cloud:
+#
+#    - Artifact Registry Administrator (roles/artifactregistry.admin)
+#    - Kubernetes Engine Developer (roles/container.developer)
+#
+#    You can learn more about setting IAM permissions at
+#    https://cloud.google.com/iam/docs/manage-access-other-resources
+#
+# 5. Change the values in the "env" block to match your values.
+
+name: 'Build and Deploy to GKE'
+
+on:
+  push:
+    branches:
+      - '"main"'
+
+<?xml version="1.0" encoding="UTF-8"?>
+<servidor>
+    <nombre>Torre de Trueno</nombre>
+    <descripcion>¡Bienvenido a la mejor experiencia de Minecraft!</descripcion>
+    <informacion>
+        <ip>TorredeTruenos.aternos.me:64806</ip>
+        <discord>https://discord.gg/Npm84bFw</discord>
+    </informacion>
+    <kits>
+        <kit>
+            <nombre>Emperador</nombre>
+            <precio>5.99</precio>
+            <mensaje>Este kit está disponible para comprar en el juego</mensaje>
+        </kit>
+        <kit>
+            <nombre>Dios</nombre>
+            <precio>2.99</precio>
+            <mensaje>Este kit está disponible para comprar en el juego</mensaje>
+        </kit>
+        <kit>
+            <nombre>Majestuoso</nombre>
+            <precio>1.99</precio>
+            <mensaje>Este kit está disponible para comprar en el juego</mensaje>
+        </kit>
+        <kit>
+            <nombre>Titán</nombre>
+            <precio>7.99</precio>
+            <mensaje>Este kit está disponible para comprar en el juego</mensaje>
+        </kit>
+        <kit>
+            <nombre>PvP</nombre>
+            <precio>1.00</precio>
+            <mensaje>Este kit está disponible para comprar en el juego</mensaje>
+        </kit>
+    </kits>
+    <mensaje>
+        Próximamente tendremos más información. Por ahora, la página está en mantenimiento y expansión.
+    </mensaje>
+    <copyright>
+        &copy; 2024 Torre de Trueno. Todos los derechos reservados.
+    </copyright>
+</servidor>
